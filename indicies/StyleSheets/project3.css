@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: 400% 400%;
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.text-box {
+  border: 2px solid black; /* Width, Style, Color */
+  padding: 10px; /* Space inside the box */
+  margin: 20px; /* Space outside the box */
+}

@@ -1,0 +1,47 @@
+.login-button {
+  margin-top: 10px;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sign-up-button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.fields {
+  flex-grow: 1;
+  margin-bottom: 5px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 12px 15px;
+}
+
+.Container {
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.button-on {
+  background: green;
+}
+
+.button-off {
+  background: red;
+}
