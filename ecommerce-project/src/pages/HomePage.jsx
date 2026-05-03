@@ -1,6 +1,6 @@
 import { Header } from "../components/Header.jsx";
 import CheckmarkIcon from "../assets/images/icons/checkmark.png";
-import { products } from "../../starting-code/data/products";
+import { products } from "../../data/products.js";
 import "./HomePage.css";
 
 export function HomePage() {
