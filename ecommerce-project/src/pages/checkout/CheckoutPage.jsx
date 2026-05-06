@@ -5,7 +5,7 @@ import { formatMoney } from "../../utils/money";
 import { CheckoutHeader } from "./CheckoutHeader";
 import "./CheckoutPage.css";
 
-export function CheckoutPage({ cart }) {
+export function CheckoutPage({ cart, setCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState([null]);
 
@@ -101,6 +101,18 @@ export function CheckoutPage({ cart }) {
                                   deliveryOption.id ===
                                   cartItem.deliveryOptionId
                                 }
+                                onChange={() => {
+                                  const updatedCart = cart.map((item) => {
+                                    if (item.productId === cartItem.productId) {
+                                      return {
+                                        ...item,
+                                        deliveryOptionId: deliveryOption.id,
+                                      };
+                                    }
+                                    return item;
+                                  });
+                                  setCart(updatedCart);
+                                }}
                                 className="delivery-option-input"
                                 name={`delivery-option-${cartItem.productId}`}
                               />
@@ -158,7 +170,6 @@ export function CheckoutPage({ cart }) {
                   <div className="delivery-option">
                     <input
                       type="radio"
-                      checked
                       className="delivery-option-input"
                       name="delivery-option-1"
                     />
@@ -253,7 +264,6 @@ export function CheckoutPage({ cart }) {
                   <div className="delivery-option">
                     <input
                       type="radio"
-                      checked
                       className="delivery-option-input"
                       name="delivery-option-2"
                     />
